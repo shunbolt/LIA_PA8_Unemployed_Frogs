@@ -1,0 +1,342 @@
+%% Modèle / template pour début de document via Texmaker / Latex %% 
+
+% By Raphaël Tran %
+
+% Type de document% 
+\documentclass{article}
+
+%% Package algorithmique (traduit en français) %% 
+
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\renewcommand{\algorithmicrequire}{\textbf{Donnee}}
+\renewcommand{\algorithmicensure}{\textbf{Variables locales}}
+\renewcommand{\algorithmicend}{\textbf{fin}}
+\renewcommand{\algorithmicif}{\textbf{si}}
+\renewcommand{\algorithmicthen}{\textbf{alors}}
+\renewcommand{\algorithmicelse}{\textbf{sinon}}
+\renewcommand{\algorithmicelsif}{\algorithmicelse\ \algorithmicif}
+\renewcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
+\renewcommand{\algorithmicfor}{\textbf{pour}}
+\renewcommand{\algorithmicdo}{\textbf{faire}}
+\renewcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+\renewcommand{\algorithmicwhile}{\textbf{tant que}}
+\renewcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
+\renewcommand{\algorithmicprint}{\textbf{afficher}}
+\renewcommand{\algorithmicreturn}{\textbf{retourner}}
+\renewcommand{\algorithmictrue}{\textbf{vrai}}
+\renewcommand{\algorithmicfalse}{\textbf{faux}}
+\renewcommand{\listalgorithmname}{Liste des \ALG@name s}
+\newcommand{\LINEFOR}[2]{%
+    \STATE\algorithmicfor\ {#1}\ \algorithmicdo\ {#2} %
+}
+\newcommand{\LINEIF}[2]{%
+	\STATE\algorithmicif\  {#1}\ \algorithmicthen\  {#2} %
+}
+\algsetup{indent=1cm}
+
+
+
+% Package divers % 
+\usepackage[english]{babel} % Langage francais
+\usepackage{graphicx} % Images
+\usepackage[utf8]{inputenc} % Police
+\usepackage{amsmath} % Langage mathématique
+\usepackage[top=3cm, bottom=2cm, left=4cm, right=4cm]{geometry} % Marges
+\usepackage{amssymb} 
+\usepackage{amsthm}
+\usepackage[x11names]{xcolor}
+\usepackage{variations}
+\usepackage{fancybox}
+\usepackage{comment} % multiline comment
+\usepackage{wrapfig} % Text next to images
+\usepackage{lipsum} % fill text
+\usepackage{hyperref} % hyperlink 
+\usepackage{eurosym} % euro 
+\usepackage{varwidth} % blocs de texte
+\usepackage{kbordermatrix} % labeled matrix
+\usepackage{epigraph} % epigraph et citations
+\usepackage{titlesec}
+\usepackage{emptypage} 
+%\usepackage[backend = biber]{biblatex} % bibliography
+%\addbibresource{eton.bib}
+\usepackage{csquotes}
+\usepackage{CJKutf8}
+\usepackage[lofdepth,lotdepth]{subfig}
+
+
+% Package de dessin tikz aka best package ever%
+
+\usepackage{tikz} 
+\usetikzlibrary{arrows,3d}
+
+
+%Package de tête et pied de page \fancyhdr 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\lhead{\rightmark}
+\cfoot{\thepage}
+\lfoot{Unemployed Frogs}
+\rfoot{M1-BD \it{2019-2020}}
+
+% Titre de première page %
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+\makeindex
+\begin{document}
+\begin{titlepage}
+\center
+
+ \LARGE \textsc{Efrei Paris}
+\\[1.5cm]
+\Large \textsc{Report}
+\\[0.5cm]
+\large \textsc{Andreas Topp - Benoît Charroux}
+\\[0.5cm]
+\HRule \\[0.4cm]
+ {\Huge \bfseries Business analysis document - LIA Project}\\[0.4cm] % Title of your document
+\HRule \\[1.4cm]
+
+\includegraphics[scale=1]{../../../Logo_Efrei.jpg}  \\[1cm]
+
+{ \Large Unemployed Frogs}  \\[0.5cm]
+{ \Large Redactor : Raphaël \textsc{Tran}}  \\[0.5cm]
+{\large \today } \\[2pt]
+
+\end{titlepage}
+
+\tableofcontents
+\newpage
+\section{Product presentation}
+
+\subsection{What is LIA ?}
+
+LIA is a chatbot designed for harassed students children (12-16 yrs old) as a new media to transmit and signal their issues to school authorities. Our product distinguish itself from phone lines which are often unavailable and not comfortable for the child user.
+
+\subsection{Goal and objective}
+
+The goal of our product is to provide two main services :
+
+\begin{itemize}
+\item For the victims a new and more comfortable approach to speak about their issues without being face to face with an actual person.
+\item For the school authorities, an additional mean to be aware of the 
+\end{itemize} 
+
+We are still debating whether our bot can preemptively treat the problems of the child by storing some of the discussion as a report or serve strictly as a medium between the child and the competent people. Given our limited knowledge around harassed children and the sensibility of the topic we are strongly considering the latter option.
+
+\medskip
+
+We also want to make the conversation as tactful, discreet and anonymous as possible to preserve the integrity and the trust given by the minor during the discussion.
+
+\subsection{Logo designs}
+
+We have worked on several logo designs to represent our product :
+
+\begin{figure}[ht]
+\centering
+\subfloat[Logo design 1]{
+      \includegraphics[scale=0.5]{LIA_logo1}
+      \label{sub:logo1}
+      
+                         }
+    \subfloat[Logo design 2]{
+      \includegraphics[scale=0.5]{LIA_logo2}
+      \label{sub:logo2}
+      
+                         }
+
+\end{figure} 
+
+The idea is to use colors that represent help and cure like red  and are attractive enough to the children. The usage of gradient and the letters placement are still debated among the team.
+
+\medskip
+
+The figure is still a work in progress and will definitely not reflect the final result
+
+
+\newpage
+
+\section{Business definition}
+
+\subsection{Targets and beneficiaries}
+
+We need to distinguish users and purchasers of the product.
+
+
+\subsubsection{Users}
+
+The main users are french children - 6 to 18 years old - suffering from bullying and harassment in school. The goal is to release the chatbot in primary, middle and high schools in France for it to be used by their students. We are not interested in their income, demography or rhythm usage for our business analysis but we keep in mind that our target users are not necessarily financially, academically or mentally stable.
+
+\medbreak
+
+The chatbot might be improved, in order to "understand" other languages in case of success in French schools. And thus, may be used in other countries, by children outside of France.
+
+\subsubsection{Purchasers}
+
+The main purchasers are schools who suffered or are suffering from child bullying and are surrounded by a hostile and unfit environment for studying called '\textit{Zone d'education prioritaire}'. The schools do not have the human resources to deal or at least be available to deal with children bullying. This is the main need that our product responds to. 
+
+
+\subsection{Potential partners}
+
+\begin{itemize}
+\item {\bf Psychologist's office} LIA can provide them customers by redirecting victims towards the suitable cabinets. In counterpart,
+they give us a certain amount of their profit. By doing that, they can stand for a good cause as well. It
+can only be benefit for their personal image.
+\item {\bf Specialists in child psychology}
+Same reason as the previous one
+\item {\bf Associations fighting against school harassment}
+It follows their guideline and goals. They exist because of this major issue therefore they can provide
+us support to implement our solution by advertisement or prospection for instance. They can provide
+us statistics and useful information to enhance our solution.
+\item {\bf The Ministry of National Education}
+Solve the major and old issue that represents school harassment within National Education. In
+counterpart, they may buy our solution and implement it in the whole country. They may also
+provide us an important support for the project (access to confidential information/statistics?).
+\item {\bf Public schools}
+They will fight efficiently against school harassment. Their pupils will have a safer school life and a
+better individual support. In counterpart, they can represent a source of advertisement or
+prospection for us. They may allow us to perform some direct tests within the school.
+\item {\bf Private schools}
+Same reason as the previous one
+\end{itemize}
+
+\subsection{Potential suppliers}
+
+The term suppliers is quite vague for our project. We estimate that the possible supplier is the webpage which will be used as a support to our chatbot. Eventually if we need to store data we will use a cloud provider (AWS for instance).
+
+\subsection{Potential technologies}
+
+While searching for the best way to create a chatbot suitable for our purpose, we identified two main possibilities.
+Both were very different in their behavior and implementation, yet we had to review them in order to choose the best option knowing our subject.
+
+\subsubsection{Messenger Chatbot}
+
+Our first thoughts were aimed at the facebook messenger-like chatbots. In effect, those chatbots are really getting commons nowadays and we can easily contact them in order to buy train tickets or to ask for the cinema program for example.
+Since a lot of people in France are using Facebook messenger, it seemed an interesting option.
+
+The best parts of the messenger's chatbot system are that it is very easy to set up, well suited for most of the teenagers that are our target users and people (especially millenials) are really comfortable with the uses of this technology.
+
+However, there are also certain drawbacks about this platform. First, the chatbots proposed are very simple and far from being clever. They are often unable to adapt to situations and are only reacting to very specific keywords.
+Then, our service should not only be accessible by Facebook users since some kids are getting bullied or harassed
+and do not have the ability or the will to create a Facebook account. Finally, we may will have to keep some information confident and to manage data with very careful methods and we do not think that the messenger's chatbots are suited for this.
+
+In other hands, we feel like Facebook messenger's chatbots are not really effective in our use case. We do not think that
+their technology is bad or safe but is is certainly not the best option for us.
+
+\subsubsection{Create a chatbot by yourself}
+
+There actually exist powerful libraries that are meant to help developers to create chatbot in many programming 
+languages. Since our group is willing to work with python, we took a look at the technologies at our disposition. In fact, 
+python seems to be a very appropriate language for our project since it is very effective with machine and deep learning, data management and even website building with some frameworks like Django or Flask.
+
+The chatter bot library seems well adapted for our purpose. (\url{https://chatterbot.readthedocs.io/en/stable/}). It has several advantages: it is language-independent that means that we can configure out in french, it seems not very difficult to handle and it is supported by a large community of users.
+
+Since we want to be independent from social medias, we will have to create our own website so that the people will
+be able to join our service. We plan to create a website using Django since it would also be written with Python and it
+gives us a certain consistency across the different modules of our program.
+
+We will also have a consequent part about data analysis and we are not sure yet about the technology that we must use.
+When we will be more familiar with the data that we obtain, we will have to decide about which database system is the best for our project. We will certainly make a choice between SQL and mongoDB since most of us are already familiar with those technologies.
+
+The most difficult point about our project will be the training of the deep-learning algorithm. It may will be difficult to prepare our bot to such a large choice of sentences that will be sent by the users. Our algorithm will have to be robust and we will have to implement it so it never gives bad advice since our topic is extremely sensitive.
+
+\subsection{Juridical and environmental constraints}
+
+\subsubsection{Legal constraints}
+
+The major constraint is going to be a legal one. It will reside in the fact that we store potential sensitive data on our users. We will not have access to it, the goal is that the AI takes care of itself. We will circumvent this constraint by making sure to be there just to convey the case of harassment to the competent persons (headmaster, principal, etc.) confronted by our user. 
+
+\medskip
+
+In order to be careful about this topic, we have contacted the CNIL and several psychologists as well as our law teacher in order to advise us about all the legal part. 
+
+\subsubsection{Other constraints}
+
+Regarding the environmental context, the technological or commercial aspects, we do not invent anything or use any particular technology so there will be no constraints on these points.
+
+\subsection{Direct and indirect competitors}
+
+There are already some solutions if you are bullied at school.
+
+\begin{enumerate}
+\item First, you can go directly to the direction of the school, to parents or people you're familiar with to
+explain your problem. This may be a solution, but there a no competitor here and also, the student
+may not be comfortable to directly speak about his problem(s)
+\item Another solution is to call the '' Numéro vert : « Non au harcèlement »'' to the number 3020. This is
+open Monday to Friday from 9h to 20h and Saturday from 9h to 18h (except holidays). Or you can
+call the “Numéro vert : « Net écoute »” at number 0800 200 000 (if you’re bullied on internet). This is
+open Monday to Friday from 9h to 19h. 
+\end{enumerate}
+
+These phone call solutions are provided by the government. They are free, anonymous and
+confidential. You explain your problems to a person and then you are redirected to a proper solution,
+like seeing a psychologist. Till now, 55,828 requests and 14,445 calls were answered via the toll-free
+number 3020. This is efficient, but some children may not be comfortable talking about their
+problems with someone on the phone. And in addition, these phone call services are not always
+open.
+
+\newpage
+
+\subsection{Best and worst practices}
+
+
+List of do's :
+
+\begin{itemize}
+\item Help teenagers while keeping them as anonymous as possible
+\item Sending and transmitting notifications to authorities
+\item Being as transparent as possible to the user (data handling).
+\item Being available 24/7
+\end{itemize}
+
+\medskip
+
+List of don'ts 
+
+\begin{itemize}
+\item Avoid fake reports 
+\item Make the user feel uncomfortable and distrusted during the discussions
+\item Not respecting the data managmeent / CNIL / laws
+\item Unable to link the victim with anyone
+\end{itemize}
+
+Our chatbot, have for goal to help teenagers against bullying. It will send alert to the appropriate authority and keep them anonymous. Teenagers are now more comfortable with message than with phone call so it will help them to talk.
+Our chatbot will have a good impact because alerts are sent directly to the school and it's less stressful for teenagers to discuss with a chatbot on a chat. It will also be 24/7 available witch is way better than the actual service.
+But using a chatbot can create some problem, it can be used to create fake report because it's easier to lie using message than using phone call. If the teenager feels bad the bot won't be able to help him like a psychologist would do.
+
+\subsection{Innovative and differentiation aspects}
+
+The main alternative to our problem of bullying in school are:
+\begin{itemize}
+\item	Going head to head with the main parties – teachers
+\item	Use a phone line
+\end{itemize}
+The project uses several innovative technologies in order to distinguish from it's alternatives :
+\begin{itemize}
+\item Automated conversation : The chatbot manages to reproduce a conversation using Data Processing algorithms used in other existing chatbots. In this case however, the conversation is directed towards children suffering psychological damage and the words used by the bot must be chosen carefully so that the user feels reassured, secured and informed
+\item Graphical interface : Most of the kids nowadays are familiar with the current computer systems tools. As such we can implement a web-design interface in order for the user to interact and chat with our bot
+\item Notification system : A notification (e-mail or phone alert) will be send to school authorities or psychologists. 
+\item Autonomous system : No need of a physical person to monitor the discussion.
+\end{itemize}
+
+\subsection{Potential revenues}
+
+Talking about revenues with this project may be tricky. 
+
+We want here to help people who are bullied, so we cannot make them pay for using our chatbot.
+
+What can be maybe done is to propose our chatbot to schools directly. Maybe offer them a monthly subscription with a premium version of our chatbot (extra features compared to the free one. We don’t know which features yet). In that case, all students from a school that is subscribed to our chatbot would be able to access the premium version.
+
+We thought about doing so with the normal version of the chatbot, but in that case, lots of students wouldn't be able to use it because their school didn't subscribe to the chatbot.
+
+We could also do partnerships/sponsorship with psychologist offices. We could redirect bullied students to some psychologists that pay us, depending on the student location.
+
+We could maybe sell the project directly to the government, particularly to the ministry of Education.
+
+We could also ask users for donations, or maybe, depending on the support of the chatbot, use paid advertisements.
+
+
+\end{document}
