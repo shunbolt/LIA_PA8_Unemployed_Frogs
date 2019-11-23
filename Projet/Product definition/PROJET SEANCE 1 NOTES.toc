@@ -1,4 +1,0 @@
-\babel@toc {english}{}
-\contentsline {section}{\numberline {1}M\IeC {\'e}thodologies et concept}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}Synth\IeC {\`e}se \IeC {\'e}crite d'id\IeC {\'e}es innovantes}{2}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Parties prenantes du projet}{2}{subsection.1.2}
